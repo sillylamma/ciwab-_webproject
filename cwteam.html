@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIWAB | Centre for Integrated Water and Basin Management</title>
+    <script src="https://kit.fontawesome.com/427617f3b0.js" crossorigin="anonymous"></script>
+   ,<link rel="stylesheet" href="ciwab2.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="brand">
+            <i class="fa-solid fa-water"></i> CIWAB
+        </a>
+        
+        <div class="mobile-toggle-container" style="display: none;"></div>
+
+        <div class="nav-right" style="flex: unset;">
+             <div class="theme-toggle" id="theme-toggle" title="Toggle Dark Mode">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="hamburger"><i class="fa-solid fa-bars"></i></label>
+        
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="ciwabhp2.html">Home</a></li>
+            <li class="nav-item">About
+                <div class="dropdown">
+                    <a href="cwabout2.html">About CIWAB</a>
+                    <a href="cwteam.html">Our Team</a>
+                    <a href="cwpartners.html">Partners</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="cwresearch.html">Research</a></li>
+                
+            <li class="nav-item"><a href="cwpub2.html">Publications</a></li>
+            <li class="nav-item"><a href="cwfaq.html">FAQ</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <img src="images/egerton_logo.png" alt="Egerton University" class="egerton-logo">
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>Water Security<br>For A Sustainable Future</h1>
+            <p>Pioneering integrated basin management, research, and community empowerment across Kenya.</p>
+        </div>
+        <div class="custom-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+<body class="bdy1">
+  <section class="team-section">
+    <h1>Meet Our Team</h1>
+    <div class="team-container">
+      
+      <div class="team-card">
+        <img src="images/member1.jpg" alt="John Doe">
+        <h2>John Doe</h2>
+        <p class="role">Project Lead</p>
+        <p class="bio">John oversees the CIWABS project, ensuring smooth collaboration and innovation.</p>
+        <div class="social-links">
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <img src="images/member2.jpg" alt="Jane Smith">
+        <h2>Jane Smith</h2>
+        <p class="role">Research Coordinator</p>
+        <p class="bio">Jane manages research activities and connects findings with community impact.</p>
+        <div class="social-links">
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+   
+</body>
+<footer>
+        <div class="container">
+            <div class="footer-cols">
+                <div class="f-col">
+                    <h3 class="brand"><i class="fa-solid fa-water"></i> CIWAB</h3>
+                    <p>Egerton University, Njoro, Kenya</p>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:ciwab_egerton@gmail.com" title="Email Us"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://twitter.com" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="tel:+2288727355" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="f-col">
+                    <h3>Quick Links</h3>
+                    <a href="ciwabhp2.html" class="footer-link">Home</a>
+                    <a href="cwabout2.html" class="footer-link">About Us</a>
+                    <a href="cwresearch.html" class="footer-link">Research</a>
+                    <a href="cwpub2.html" class="footer-link">Publications</a>
+                    <a href="ciwab_contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="f-col">
+                    <h3>Contact Us</h3>
+                    <a href="mailto:ciwab_egerton@gmail.com" class="footer-link">ciwab_egerton@gmail.com</a>
+                    <p class="footer-link">Phone: +228 872 7355</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px; border-top: 1px solid #1a2f42; padding-top: 20px;">
+                &copy; 2025 CIWAB – All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+       const currentTheme = localStorage.getItem('theme');
+        const toggleBtn = document.getElementById('theme-toggle');
+        const icon = toggleBtn.querySelector('i');
+        const body = document.body;
+
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        
+        toggleBtn.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+            
+            
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</html>
