@@ -1,0 +1,70 @@
+body{
+    
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 2px;
+    background-color: #121212;
+    accent-color: #007bff;
+    
+    transition: background-color 0.3s, color 0.3s;
+
+}
+.ciwab_section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-header {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.put-grid{
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px auto;
+    max-width: 1000px;
+}
+.logo-area {
+    text-align: center;
+}
+.description text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: burlywood;
+     max-width : 800px;
+       grid-area: text; 
+       margin: auto;
+}
+h1{
+    display: block;
+    font-size: 2em;
+    margin-top: 0em;
+    margin-bottom: 0.67em;
+    background-color: rgb(47, 153, 153);
+    text-align: center;
+    padding: 20px;
+}
+h3{
+    color: rgb(47, 153, 153);
+}
+.dark-mode {
+    background-color: #121212;
+    
+    accent-color: #004d99;
+    text-primary-color: #333333;
+    
+}
+.dark-mode p, .dark-mode h2, .dark-mode h3 {
+    color: #1f0a0a;
+}
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
