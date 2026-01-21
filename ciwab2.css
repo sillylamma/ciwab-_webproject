@@ -1,5 +1,4 @@
-
-        :root {
+:root {
             --primary: #00264d;     
             --primary-light: #004d99;
             --accent: #00e5ff;      
@@ -63,7 +62,11 @@
         .brand i { color: var(--accent); animation: float 3s ease-in-out infinite; }
 
         .nav-menu { 
-            display: flex; gap: 30px; align-items: center; flex: 2; justify-content: center;
+            display: flex;
+             gap: 30px; 
+             align-items: center; 
+             flex: 2; 
+             justify-content: center;
         }
         
         .nav-item {
@@ -84,6 +87,7 @@
             font-size: 1.2rem;
             color: var(--primary);
             padding: 10px;
+            
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -108,7 +112,13 @@
         .dropdown a:hover { background: var(--bg-off); color: var(--primary); padding-left: 25px; }
 
         #nav-toggle { display: none; }
-        .hamburger { display: none; font-size: 1.8rem; color: var(--primary); cursor: pointer; margin-left: 20px; }
+        .hamburger { display: none;
+             font-size: 1.8rem; 
+             color: var(--primary);
+              cursor: pointer;
+              z-index: 1002;
+               margin-left: 20px; 
+            }
 
         .hero {
             position: relative; height: 85vh; display: flex; align-items: center; justify-content: center;
@@ -186,8 +196,12 @@
             max-width: 1200px; margin: 40px auto 0;
         }
         .obj-card {
-            padding: 30px; background: var(--bg-off); border-radius: 12px;
-            border-left: 5px solid var(--accent); transition: 0.3s;
+            padding: 30px;
+             background: var(--bg-off);
+              border-radius: 12px;
+            border-left: 5px solid var(--accent);
+             transition: 0.3s;
+             color: var(--text-main);
         }
         .obj-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px var(--shadow-color); background: var(--card-bg); }
         .obj-card i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
@@ -234,9 +248,15 @@
         .news-section { background: var(--bg-off); padding: 80px 0; }
         .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .news-card {
-            background: var(--card-bg); border-radius: 15px; overflow: hidden;
-            transition: 0.3s; display: flex; flex-direction: column; height: 100%;
+            background: var(--card-bg);
+             border-radius: 15px;
+              overflow: hidden;
+            transition: 0.3s; 
+            display: flex;
+             flex-direction: column;
+              height: 100%;
             border: 1px solid var(--shadow-color);
+            color: var(--text-main);
         }
         .news-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px var(--shadow-color); }
         .news-img { height: 200px; width: 100%; object-fit: cover; }
@@ -302,16 +322,58 @@
         .social-icons a:hover { background: var(--accent); color: var(--primary); transform: translateY(-5px); box-shadow: 0 0 15px var(--accent-glow); }
 
         @media (max-width: 900px) {
-            .hamburger { display: block; }
+            .hamburger { display: block;
+            cursor: pointer;
+            z-index: 1002; }
             .nav-menu {
-                position: fixed; top: var(--nav-height); right: -100%; width: 100%; height: 100vh;
-                background: var(--card-bg); flex-direction: column; padding: 40px; transition: 0.4s;
+                display: flex;
+                position: fixed;
+                 top:0; 
+                 right: -100%;
+                  width: 280px;
+                  height: 100vh;
+                background: var(--card-bg); 
+                flex-direction: column; 
+                justify-content: flex-start;
+                padding: 100px 30px;              
+                transition: 0.4s;
+                transition: 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+                box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        z-index: 1001;
+        backdrop-filter: blur(10px);
             }
             #nav-toggle:checked ~ .nav-menu { right: 0; }
             .nav-right { display: none; } 
+            .nav-item {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--shadow-color);
+        font-size: 1.1rem;
+    }
+
+    .nav-item::after { display: none; } 
+
+    .dropdown {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        background:var(--card-bg);
+        padding-left: 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+   
+    .nav-item:hover .dropdown {
+        max-height: 200px;
+        margin-top: 10px;
+    }
             
             .mobile-toggle-container {
-                display: block; position: absolute; top: 30px; right: 80px;
+                display: block; position: absolute; top: 30px; right: 80px;z-index: 1002;
             }
 
             .hero h1 { font-size: 2.5rem; }
@@ -319,6 +381,21 @@
             .zig-img img { margin: 0 auto; }
             .zig-text h2::after { margin: 5px auto; }
         }
+        #nav-toggle:checked ~ .menu-overlay {
+    display: block;
+}
+
+#nav-toggle:checked ~ .hamburger i::before {
+    content: "\f00d"; /* FontAwesome X icon code */
+}
+
+.hamburger {
+    transition: transform 0.3s ease;
+}
+
+#nav-toggle:checked ~ .hamburger {
+    transform: rotate(90deg);
+}
 
     .cont {
       max-width: 1100px;
@@ -333,11 +410,12 @@
     }
 
     .pub-card {
-      background: #fff;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       padding: 1.5rem;
       transition: transform 0.2s ease;
+      background: var(--card-bg);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    color: var(--text-main);
     }
 
     .pub-card:hover {
@@ -346,8 +424,7 @@
 
     .pub-card h3 {
       margin-top: 0;
-      color: #004466;
-    }
+     color: var(--primary);    }
 
     .pub-card p {
       font-size: 0.95rem;
@@ -383,8 +460,9 @@
     margin-top: 45px;
 }
 .research-card {
-    background: #fff;
-    border-radius: 18px;
+background: var(--card-bg);
+    color: var(--text-main);  
+      border-radius: 18px;
     padding: 25px;
     text-align: center;
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
@@ -407,7 +485,8 @@
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    background: #fff;
+    background:var(--bg-off);
+    color: var(--text-main);
     padding: 25px;
     border-radius: 18px;
     margin-top: 30px;
@@ -482,7 +561,8 @@
 }
 
 .news-card {
-    background: white;
+    background: var(--card-bg);
+    color: var(--text-main);
     padding: 20px;
     margin-bottom: 25px;
     border-radius: 6px;
@@ -509,13 +589,13 @@
 
 .partner-card {
     width: 330px;
-    background: #ffffff;
+    background:white;
     padding: 20px;
     border-radius: 14px;
     border: 1px solid #ccc;
     text-align: center;
     text-decoration: none;
-    color: rgb(2, 2, 2);
+    color: black;
     transition: 0.25s ease-in-out;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     display: flex;
@@ -532,7 +612,7 @@
 
 .partner-card h2 {
     font-size: 1.25rem;
-    color: #002a63;
+    color: var(--primary);
     margin-bottom: 12px;
 }
 
@@ -652,4 +732,14 @@
 
 .social-links a:hover {
   color: #004466;
-}
+        .waves-container { position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; z-index: 3; overflow: hidden; line-height: 0; }
+        .parallax > use { animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite; }
+        .parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; fill: rgba(244,248,251,0.7); }
+        .parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; fill: rgba(244,248,251,0.5); }
+        .parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; fill: rgba(244,248,251,0.3); }
+        .parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; fill: var(--bg-off); }
+        body.dark-mode .parallax > use:nth-child(1) { fill: rgba(18,18,18,0.7); }
+        body.dark-mode .parallax > use:nth-child(2) { fill: rgba(18,18,18,0.5); }
+        body.dark-mode .parallax > use:nth-child(3) { fill: rgba(18,18,18,0.3); }
+        body.dark-mode .parallax > use:nth-child(4) { fill: var(--bg-off); }
+        @keyframes move-forever { 0% { transform: translate3d(-90px,0,0); } 100% { transform: translate3d(85px,0,0); } }
