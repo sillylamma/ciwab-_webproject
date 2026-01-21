@@ -23,6 +23,10 @@
             --shadow-color: rgba(0,0,0,0.5);
             --nav-bg: rgba(18, 18, 18, 0.95);
         }
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 41d9f25 (aboutpage updt)
 
         * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s ease, color 0.3s ease; }
         html { scroll-behavior: smooth; }
@@ -187,7 +191,11 @@
         }
         .obj-card {
             padding: 30px; background: var(--bg-off); border-radius: 12px;
+<<<<<<< HEAD
             border-left: 5px solid var(--accent); transition: 0.3s;
+=======
+            border-left: 5px solid var(--accent); transition: 0.3s;color: var(--text-main);
+>>>>>>> 41d9f25 (aboutpage updt)
         }
         .obj-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px var(--shadow-color); background: var(--card-bg); }
         .obj-card i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
@@ -236,7 +244,11 @@
         .news-card {
             background: var(--card-bg); border-radius: 15px; overflow: hidden;
             transition: 0.3s; display: flex; flex-direction: column; height: 100%;
+<<<<<<< HEAD
             border: 1px solid var(--shadow-color);
+=======
+            border: 1px solid var(--shadow-color); color: var(--text-main);
+>>>>>>> 41d9f25 (aboutpage updt)
         }
         .news-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px var(--shadow-color); }
         .news-img { height: 200px; width: 100%; object-fit: cover; }
@@ -407,7 +419,12 @@
     display: flex;
     align-items: flex-start;
     gap: 20px;
+<<<<<<< HEAD
     background: #fff;
+=======
+    background: var(--bg-off);
+    color: var(--text-main);
+>>>>>>> 41d9f25 (aboutpage updt)
     padding: 25px;
     border-radius: 18px;
     margin-top: 30px;
@@ -445,7 +462,12 @@
     margin-top: 20px;
 }
 .partner-logos img {
+<<<<<<< HEAD
     width: 150px;
+=======
+    max-width: 250px;
+    height: 150px;
+>>>>>>> 41d9f25 (aboutpage updt)
     filter: drop-shadow(0 3px 6px rgba(0,0,0,0.15));
 }
 .contain {
@@ -581,12 +603,16 @@
        grid-area: text; 
        margin: auto;
 }
+<<<<<<< HEAD
 .bdy1 {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #f9f9f9;
   color: #333;
 }
+=======
+
+>>>>>>> 41d9f25 (aboutpage updt)
 
 .team-section {
   text-align: center;
@@ -595,8 +621,15 @@
 
 .team-section h1 {
   font-size: 2.5em;
+<<<<<<< HEAD
   margin-bottom: 30px;
   color: #004466;
+=======
+  border-left: 10px solid var(--accent);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  color: #03608f;
+>>>>>>> 41d9f25 (aboutpage updt)
 }
 
 .team-container {
@@ -607,7 +640,12 @@
 }
 
 .team-card {
+<<<<<<< HEAD
   background: #fff;
+=======
+  background: var(--card-bg);
+  color: var(--text-main);
+>>>>>>> 41d9f25 (aboutpage updt)
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   width: 280px;
@@ -621,9 +659,15 @@
 
 .team-card img {
   width: 100%;
+<<<<<<< HEAD
   border-radius: 50%;
   height: 180px;
   object-fit: cover;
+=======
+  border-radius: 5px;
+  height: auto;
+  
+>>>>>>> 41d9f25 (aboutpage updt)
   margin-bottom: 15px;
 }
 
@@ -652,4 +696,108 @@
 
 .social-links a:hover {
   color: #004466;
+<<<<<<< HEAD
 }
+=======
+}
+
+    /* Main Content Styling */
+    main#main-content {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .ciwab_section {
+        background: var(--card-bg);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px var(--shadow-color);
+        margin-bottom: 50px;
+    }
+
+    .ciwab_section h2 {
+        color: var(--primary);
+        font-size: 2rem;
+        margin-bottom: 20px;
+        border-left: 5px solid var(--accent);
+        padding-left: 15px;
+    }
+
+    .description-text p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-main);
+        margin-bottom: 30px;
+        text-align: justify;
+    }
+
+    /* Grid Layout for Vision, Mission, Values, Objectives */
+    .put-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .put-grid > div {
+        background: var(--bg-off);
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid var(--shadow-color);
+        transition: transform 0.3s ease;
+    }
+
+    .put-grid > div:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent);
+    }
+
+    .put-grid h3 {
+        color: var(--primary-light);
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* List Styling */
+    .put-grid ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .put-grid ul li {
+        margin-bottom: 12px;
+        position: relative;
+        padding-left: 25px;
+        line-height: 1.5;
+    }
+
+    .put-grid ul li::before {
+        content: "\f058"; /* FontAwesome Check Circle */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+    }
+
+    /* Responsive adjustment for small screens */
+    @media (max-width: 768px) {
+        .put-grid {
+            grid-template-columns: 1fr;
+        }
+        h1 { font-size: 2rem; }
+    }
+>>>>>>> 41d9f25 (aboutpage updt)
