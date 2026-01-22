@@ -520,3 +520,71 @@
 .nav-menu           { justify-content: center; }
 .stats-bar          { justify-content: space-around; }
 .partner-logos      { justify-content: center; }
+
+/* Wave Container Styles */
+.custom-wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15vh; /* Adjust height as needed */
+    min-height: 100px;
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px; /* Fixes tiny gap at the bottom */
+    min-height: 100px;
+    max-height: 150px;
+    transform: rotate(180deg);
+}
+
+/* Animation Classes */
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+/* Individual wave speeds and offsets for the flowy look */
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+/* The horizontal movement keyframe */
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/* Mobile scaling */
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+    .custom-wave {
+        height: 40px;
+    }
+}
+body.dark-mode .parallax > use {
+    fill: var(--bg-off); /* Example dark mode color */
+}
